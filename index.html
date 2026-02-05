@@ -17,8 +17,9 @@
         summary::after { content: '▼'; font-size: 10px; }
         .manual-content { padding: 12px; font-size: 13px; line-height: 1.5; color: #ddd; }
         .manual-content ul { margin: 0; padding-left: 18px; }
+        .manual-content li { margin-bottom: 5px; }
 
-        /* 設定エリアを少しコンパクトに */
+        /* 設定エリア */
         .settings-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 15px;
             background: #555; padding: 12px; border-radius: 8px;
@@ -27,11 +28,11 @@
         .input-item input { width: 90%; padding: 6px; border-radius: 4px; border: none; text-align: center; font-size: 14px; }
         #set-settings-btn { padding: 8px; font-size: 14px; }
 
-        /* カウンター枠の調整 */
+        /* カウンター枠 */
         .counter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 15px; }
         .counter-set { 
             display: flex; flex-direction: column; align-items: center; justify-content: space-between; 
-            padding: 8px; border: 1px solid #555; border-radius: 5px; background-color: #555; height: 135px; /* 高さを圧縮 */
+            padding: 8px; border: 1px solid #555; border-radius: 5px; background-color: #555; height: 135px;
         }
         .counter-set.is-empty { background-color: #3a3a3a; opacity: 0.5; border: 1px dashed #666; }
         .counter-label { font-size: 11px; color: #bbb; margin-bottom: 2px; font-weight: bold; }
@@ -66,7 +67,7 @@
                     <li><strong>初期設定:</strong> ID、人数、時間を入力し「設定を更新」してください。</li>
                     <li><strong>IDの反映:</strong> 設定するとURLにIDが含まれ、保存が可能になります。</li>
                     <li><strong>カウント:</strong> 各釣座の「＋」「ー」で釣果を記録します。</li>
-                    <li><strong>ローテーション:</strong> 席替え時は「🔄ローテ」でデータを移動できます。</li>
+                    <li><strong>ローテーション:</strong> 釣座替え時は「🔄左ローテ」「🔄右ローテ」でデータを移動できます。</li>
                     <li><strong>データ送信:</strong> 終了時は「結果を送信」で集計されます。</li>
                     <li><strong style="color: #ffc107;">重要:</strong> 審判やブラウザが変わる場合は、その前に一度送信してください。</li>
                 </ul>
@@ -99,8 +100,8 @@
         <button id="start-btn" disabled>スタート</button>
 
         <div class="controls">
-            <button id="rotate-left-btn">🔄 左</button>
-            <button id="rotate-right-btn">🔄 右</button>
+            <button id="rotate-left-btn">🔄 左ローテ</button>
+            <button id="rotate-right-btn">🔄 右ローテ</button>
         </div>
 
         <div id="counter-container" class="counter-grid"></div>
